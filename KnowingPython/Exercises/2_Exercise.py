@@ -3,14 +3,23 @@
 # Crie uma estrutura de repetição para fazer a leitura de 5 números inteiros e os armazene dentro de uma lista.
 # Após a leitura, crie outra estrutura de repetição para somar todos os valores digitados
 numberList = []
-for i in range(0, 5):
-    numberList.append(int(input(f'Set a number {i+1}: ')))
+for i in range(0, 5): # for _ in range(0, 5)
+    value = int(input(f'Set a number {i+1}: '))
+    numberList.append(value)
 
 total1 = 0
 for number in numberList:
     total1 += number
 
 print(f'Total: {total1}')
+
+# Other format
+# for number in range(len(numberList))
+#   total1 += number
+
+# Other format
+# import numpy as np
+# np.array(numberList).sum()
 
 
 # 2
@@ -39,7 +48,8 @@ import numpy as np
 matriz = np.array([[3, 4, 1],
                    [3, 1, 5]])
 
-print('LEN ', len(matriz))
+print('LEN', len(matriz)) # 2
+print('SIZE', matriz.size) # 6
 
 total3 = 0
 for i in range(matriz.shape[0]):
